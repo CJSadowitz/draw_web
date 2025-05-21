@@ -10,7 +10,7 @@
     text-align: center;
     display: flex;
     justify-content: right;
-    gap: 520px;
+    gap: 37%;
 }
 
 .nav_bar p {
@@ -38,4 +38,33 @@
 
 .nav_bar ul li a:hover {
     color: #ff9800;
+}
+
+.account_login {
+    /* Off by default: none */
+    display: none; 
+    position: fixed;
+    margin-left: 40%;
+    margin-top: 10%;
+    width: 20%;
+    background: white;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+
+.account_login .login_content {
+    display: block;
+    text-align: center;
+    padding: 5%
+}
+
+.account_login .account_creation_content {
+    display: none;
+    text-align: center;
+    padding: 5%
+}
+.account_login .no_account_content {
+    display: block;
+    text-align: center;
+    padding: 5%
 }

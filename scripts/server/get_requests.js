@@ -1,0 +1,1 @@
+// Functions for all GET and POST requests
