@@ -1,0 +1,41 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.nav_bar {
+    background-color: #333;
+    padding: 10px 20px;
+    text-align: center;
+    display: flex;
+    justify-content: right;
+    gap: 520px;
+}
+
+.nav_bar p {
+    color: white;
+    margin: 0;
+    padding: 0;
+    font-size: 18px;
+}
+
+.nav_bar ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: right;
+}
+
+.nav_bar ul li {
+    margin: 0 45px;
+}
+
+.nav_bar ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+}
+
+.nav_bar ul li a:hover {
+    color: #ff9800;
+}
