@@ -20,7 +20,7 @@
         <div class="account_login" id="account_login">
             <div class="login_content" id="login_content">
                 <h3>Login</h3><br>
-                <form onsubmit="login(post_request)">
+                <form onsubmit="login(post_request)" id="login_form">
                     <label for="username">Username: </label>
                     <input type="text" name="username" id="l_username"><br><br>
                     <label for="display_name">Display Name: </label>
@@ -52,5 +52,11 @@
         </canvas>
     </body>
     <footer>
+        <script>
+            document.getElementById("login_form").addEventListener("submit", function(event) {
+                event.preventDefault();
+            });
+
+        </script>
     </footer>
 </html>

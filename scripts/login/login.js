@@ -1,14 +1,15 @@
-function login(post_request) {
-    var username = document.getElementById("l_username");
-    var password = document.getElementById("l_password");
-    var display_name = document.getElementById("l_display_name");
+async function login(post_request) {
+    var username = document.getElementById("l_username").value;
+    var password = document.getElementById("l_password").value;
+    var display_name = document.getElementById("l_display_name").value;
 
     var message = {
+        type: "login",
         username: username,
         password: password,
         display_name: display_name
     };
-    var response = post_request(message);
+    var response = await post_request(message);
 
     console.log(response)
 }

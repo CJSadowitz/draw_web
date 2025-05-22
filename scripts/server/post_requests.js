@@ -9,5 +9,6 @@ async function post_request(message) {
     };
 
     var response = await fetch(url, request);
-    console.log(response);
+    var data = await response.json();
+    return data;
 }
