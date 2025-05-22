@@ -41,7 +41,6 @@
 }
 
 .account_login {
-    /* Off by default: none */
     display: none; 
     position: fixed;
     margin-left: 40%;
@@ -53,7 +52,7 @@
 }
 
 .account_login .login_content {
-    display: block;
+    display: none;
     text-align: center;
     padding: 5%
 }

@@ -3,21 +3,18 @@
     <head>
         <title>DRAWWW</title>
         <link rel="stylesheet" href="styles.css">
-        <script src="scripts/login/display_login_prompt.js"></script>
+        <script src="scripts/login/display_prompts.js"></script>
     </head>
     <body>
         <div class="nav_bar">
             <p id="player_name">Player Name</p>
             <ul>
-                <li>
-                    <a href="#" onclick="get_login_prompt()">Login</a>
-                </li>
+                <li><a href="#" onclick="toggle_login_page()">Login</a></li>
             </ul>
         </div>
         <div class="account_login" id="account_login">
             <div class="login_content" id="login_content">
-                <h3>Login</h3>
-                <br>
+                <h3>Login</h3><br>
                 <form>
                     <label for="username">Username: </label>
                     <input type="text" name="username" id="username"><br><br>
@@ -29,8 +26,7 @@
                 </form>
             </div>
             <div class="account_creation_content" id="account_creation_content">
-                <h3>Create Account</h3>
-                <br>
+                <h3>Create Account</h3><br>
                 <form>
                     <label for="username">Username: </label>
                     <input type="text" name="username" id="username"><br><br>
@@ -40,10 +36,11 @@
                     <input type="text" name="password" id="password"><br><br>
                     <input type="submit">
                 </form>
+                <button onclick="toggle_create_account_section()">Back</button>
             </div>   
             <div class="no_account_content" id="no_account_content">
                 <h3>Don't have an account?</h3>
-                <button onclick="">Create Account</button>
+                <button onclick="toggle_create_account_section()">Create Account</button>
             </div>
         </div>
         <canvas>
