@@ -63,7 +63,7 @@
     padding: 5%
 }
 .account_login .no_account_content {
-    display: block;
+    display: none;
     text-align: center;
     padding: 5%
 }
