@@ -2,11 +2,65 @@
 <html>
     <head>
         <title>DRAWWW</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="styles.css">
+        <link rel="icon" href="/favicon.ico" type="image/x-icon">
+        <script src="scripts/login/display_prompts.js"></script>
+        <script src="scripts/server/post_requests.js"></script>
+        <script src="scripts/login/login.js"></script>
     </head>
     <body>
+        <div class="nav_bar">
+            <p id="player_name">Player Name</p>
+            <ul>
+                <li><a href="#" onclick="toggle_login_page()">Login</a></li>
+            </ul>
+        </div>
+        <div class="account_login" id="account_login">
+            <div class="login_content" id="login_content">
+                <h3>Login</h3><br>
+                <p class="status" id="login_status"></p>
+                <form onsubmit="login(post_request)" id="login_form">
+                    <label for="username">Username: </label>
+                    <input type="text" name="username" id="l_username"><br><br>
+                    <label for="display_name">Display Name: </label>
+                    <input type="text" name="display_name" id="l_display_name"><br><br>
+                    <label for="password">Password: </label>
+                    <input type="password" name="password" id="l_password"><br><br>
+                    <input type="submit">
+                </form>
+            </div>
+            <div class="account_creation_content" id="account_creation_content">
+                <h3>Create Account</h3><br>
+                <p class="status" id="create_account_status"></p>
+                <form onsubmit="create_account(post_request)" id="create_account_form">
+                    <label for="username">Username: </label>
+                    <input type="text" name="username" id="ca_username"><br><br>
+                    <label for="display_name">Display Name: </label>
+                    <input type="text" name="display_name" id="ca_display_name"><br><br>
+                    <label for="passowrd">Password: </label>
+                    <input type="password" name="password" id="ca_password"><br><br>
+                    <input type="submit">
+                </form>
+                <button onclick="toggle_create_account_section()">Back</button>
+            </div>   
+            <div class="no_account_content" id="no_account_content">
+                <h3>Don't have an account?</h3>
+                <button onclick="toggle_create_account_section()">Create Account</button>
+            </div>
+        </div>
         <canvas>
         </canvas>
     </body>
     <footer>
+        <script>
+            document.getElementById("login_form").addEventListener("submit", function(event) {
+                event.preventDefault();
+            });
+            document.getElementById("create_account_form").addEventListener("submit", function(event) {
+                event.preventDefault();
+            });
+
+        </script>
     </footer>
 </html>
