@@ -11,6 +11,13 @@ async function login(post_request) {
     };
     var response = await post_request(message);
 
+    // handle error response
+    status_message = document.getElementById("login_status");
+    if (response.status == "error") {
+        status_message.innerHTML = response.content;
+        return;
+    }
+    status_message.innerHTML = "successfully_logged_in"
     console.log(response)
 }
 
@@ -27,5 +34,12 @@ async function create_account(post_request) {
     };
     var response = await post_request(message);
 
+    // handle error response
+    status_message = document.getElementById("create_account_status");
+    if (response.status == "error") {
+        status_message.innerHTML = response.content;
+        return;
+    }
+    status_message.innerHTML = "successfully_created_account"
     console.log(response)
 }
