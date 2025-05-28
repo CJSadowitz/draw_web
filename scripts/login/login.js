@@ -1,4 +1,4 @@
-async function login(post_request) {
+async function login(post_request, set_cookies_func, delete_cookies_func) {
     var username = document.getElementById("l_username").value;
     var password = document.getElementById("l_password").value;
     var display_name = document.getElementById("l_display_name").value;
@@ -24,9 +24,11 @@ async function login(post_request) {
     player_name.innerHTML = display_name;
 
     console.log(response)
+    delete_cookies_func();
+    set_cookies_func(response);
 }
 
-async function create_account(post_request) {
+async function create_account(post_request, set_cookies_func, delete_cookies_func) {
     var username = document.getElementById("ca_username").value;
     var password = document.getElementById("ca_password").value;
     var display_name = document.getElementById("ca_display_name").value;
@@ -51,4 +53,6 @@ async function create_account(post_request) {
     player_name = document.getElementById("player_name");
     player_name.innerHTML = display_name;
     console.log(response)
+    delete_cookies_func();
+    set_cookies_func(response);
 }
